@@ -480,13 +480,13 @@ console.log($decoded);
       $result=$result.replace(new RegExp('#VIDEO__'+$key.toUpperCase()+'#', 'g'), $video[$key]);
     } // for($key in $video)
     //
-    $result=$result.replace('CLOSE',      $language->PLAY_VIDEO);
-    $result=$result.replace('COPY_RIGHT', $language->PLAY_VIDEO);
-    $result=$result.replace('NUDITY',     $language->PLAY_VIDEO);
-    $result=$result.replace('OTHER',      $language->PLAY_VIDEO);
-    $result=$result.replace('PLAY_VIDEO', $language->PLAY_VIDEO);
-    $result=$result.replace('REPORT',     $language->PLAY_VIDEO);
-    $result=$result.replace('VIOLENCE',   $language->PLAY_VIDEO);
+    $result=$result.replace('CLOSE',      $language.PLAY_VIDEO);
+    $result=$result.replace('COPY_RIGHT', $language.COPY_RIGHT);
+    $result=$result.replace('NUDITY',     $language.NUDITY);
+    $result=$result.replace('OTHER',      $language.OTHER);
+    $result=$result.replace('PLAY_VIDEO', $language.PLAY_VIDEO);
+    $result=$result.replace('REPORT',     $language.REPORT);
+    $result=$result.replace('VIOLENCE',   $language.VIOLENCE);
     //
     return $result;
   } // format_video()
