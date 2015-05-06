@@ -480,6 +480,14 @@ console.log($decoded);
       $result=$result.replace(new RegExp('#VIDEO__'+$key.toUpperCase()+'#', 'g'), $video[$key]);
     } // for($key in $video)
     //
+    $result=$result.replace('CLOSE', $language->PLAY_VIDEO);
+    $result=$result.replace('COPY_RIGHT', $language->PLAY_VIDEO);
+    $result=$result.replace('NUDITY', $language->PLAY_VIDEO);
+    $result=$result.replace('OTHER', $language->PLAY_VIDEO);
+    $result=$result.replace('PLAY_VIDEO', $language->PLAY_VIDEO);
+    $result=$result.replace('REPORT', $language->PLAY_VIDEO);
+    $result=$result.replace('VIOLENCE', $language->PLAY_VIDEO);
+    //
     return $result;
   } // format_video()
   //
@@ -493,13 +501,13 @@ console.log($decoded);
   var $api='https://ybstung.com/api/';
   var $domain='https://ybstung.com/ops/';
   var $language=new Array();
-      $language['#PLAY_VIDEO#']='Play Video';
-      $language['#CLOSE#']     ='Close';
-      $language['#REPORT#']    ='Report';
-      $language['#NUDITY#']    ='Nudity';
-      $language['#VIOLENCE#']  ='Violence';
-      $language['#COPY_RIGHT#']='Copy Right';
-      $language['#OTHER#']     ='Other';
+      $language.CLOSE     ='Close';
+      $language.COPY_RIGHT='Copy Right';
+      $language.NUDITY    ='Nudity';
+      $language.OTHER     ='Other';
+      $language.PLAY_VIDEO='Play Video';
+      $language.REPORT    ='Report';
+      $language.VIOLENCE  ='Violence';
   var $requests=new Array();
   var $review= '<div id="#VIDEO__ID#" class=".r247_child" style="width: 300px; margin-right:5px;">';
       $review+='  <div class="thumbnail" data-toggle="modal" data-target="#myModal#IDX#">';
