@@ -420,22 +420,6 @@ function rapport247()
     //
     var $data=$parameters.DATA;
 console.log($data);
-/*
-    try
-    {
-      // Attempt to decode the response object
-      var $decoded=JSON.parse($data);
-      // If it gets here, it decoded
-    }
-    catch ($err)
-    {
-      // JSON did not decode
-      //
-      console.log($err.stack);
-      return false;
-    } // try
-console.log($decoded);
-    */
     var $selector=$parameters.selector;
     //
     var $HTML="";
@@ -449,7 +433,7 @@ console.log($decoded);
     //
     $($selector).html($HTML);
     //
-    return true;
+    return $HTML;
   } // fetch_and_format_videos_finish()
   //
   //
